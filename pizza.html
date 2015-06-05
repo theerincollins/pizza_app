@@ -10,11 +10,16 @@
 
 
   <body>
+    <div id="intro">
+      <p id="start-order">$Order a Rich People Pie$</p>
+    </div>
+
+
     <div class="container" id="build-pizza-container">
       <h1>Welcome to Rich People Pie$!</h1>
 
       <p>Build a Pie</p>
-      <form id="toppingsForm">
+      <form id="pizzaForm">
         <input type="checkbox" name="toppings[]" value="1">Sausage
         <input type="checkbox" name="toppings[]" value="15">Brownies
         <input type="checkbox" name="toppings[]" value="2">Liquid Gold
@@ -25,10 +30,7 @@
         <input type="checkbox" name="toppings[]" value="200">Platinum Crusted Mushrooms
         <input type="checkbox" name="toppings[]" value="8">Onion
         <input type="checkbox" name="toppings[]" value="9">Candied Apples
-        <button class="btn btn-success" type="submit">Select Toppings</button>
-      </form>
-
-      <form id="size-form">
+<br><br>
         <select id="size-select">
           <option value="50">Itty Bitty</option>
           <option value="100">Small</option>
@@ -37,15 +39,19 @@
           <option value="800">X-Large</option>
           <option value="1600">Super Gigantic</option>
         </select>
-        <button class="btn btn-success" type="submit">Select Size</button>
-      </form>
+<br><br>
 
-
-    <form id="quantity-form">
       <input id="quantity-input" name="quantity-input" placeholder="How Many?">
-      <button class="btn btn-success" type="submit">Select Size</button>
+<br><br>
+      <button class="btn btn-success" type="submit">Add Pizza to Order</button>
     </form>
+  </div>
 
+  <div class="container" id="order">
+  <h3>Here is your current Order and Total</h3>
+  <p>Total for Order $<span id="total"></span></p>
+    <div id="order-list-div">
+    </div>
   </div>
 
   </body>

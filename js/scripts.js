@@ -1,3 +1,6 @@
+// I am realizeing now that using a hash for the toppings may have not been the
+// best way to go, but due to time contstraints, I'm going to keep going with it.
+
 function Pizza(toppings, size, quantity) {
   this.toppings = toppings;
   this.size = size;
@@ -57,18 +60,19 @@ Order.prototype.calculateTotal = function() {
 };
 
 $(document).ready(function() {
+  $("#start-order").click(function() {
+    newOrder = new Order();
+    return newOrder;
+  });
 
-  $("form#toppingsForm").submit(function() {
+
+  $("form#pizzaForm").submit(function() {
     event.preventDefault();
     var pizzaToppings = [];
     $(':checkbox:checked').each(function(i){
       pizzaToppings[i] = parseInt($(this).val());
     });
 
-// I am realizeing now that using a hash for the toppings may have not been the
-// best way to go, but due to time contstraints, I'm going to keep going with it.
-// The following code is to make the pizza topping prices back into a hash. I
-// couldn't quite figure out how to do it from the form inputs.
     var pizzaToppingsHash = {};
     pizzaToppings.forEach(function(toppingPrice) {
       if (toppingPrice === 1) {
@@ -93,10 +97,7 @@ $(document).ready(function() {
         pizzaToppingsHash["Candied Apples"] = 9
       }
     });
-  // });
 
-  // $("form#size-form").submit(function() {
-    // event.preventDefault();
     var pizzaSizeHash = {};
     var pizzaSize = parseInt($("#size-select").val());
     if (pizzaSize === 50) {
@@ -112,14 +113,21 @@ $(document).ready(function() {
     } else if (pizzaSize === 1600) {
       pizzaSizeHash["Super Gigantic"] = 1600
     }
-  // });
 
-  // $("form#quantity-form").submit(function() {
-  //   event.preventDefault();
     var quantity = parseInt($("#quantity-input").val());
+    var newPizza = new Pizza(pizzaToppingsHash, pizzaSizeHash, quantity)
+    newOrder.addToOrder(newPizza);
+    newOrder.calculateTotal();
 
-    console.log(quantity, pizzaToppingsHash, pizzaSizeHash)
+    $("#total").text(newOrder.totalCost)
+    var index = newOrder.items.length-1;
+    var pizzaLabel = index + 1;
+    lastPizza = newOrder.items[newOrder.items.length-1]
+    $("#order-list-div").append("<ul id='order-list_" + index + "' >Pizza " + pizzaLabel + "</ul>")
+    toppings = lastPizza.toppings;
+    for (var topping in toppings) {
+      $("#order-list_" + index).append("<li>" + topping + "</li>")
+    }
+
   });
-
-
 });
