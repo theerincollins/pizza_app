@@ -1,0 +1,74 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#welcome {
+  background-image: url('../piglympics.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  color: #ffd700;
+  height: 100%;
+  display: block;
+}
+
+.pig-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 15px;
+}
+
+.pig1 {
+  background-image: url('../images/pig1.jpg');
+  background-position: 80% 15%;
+}
+
+.pig2 {
+  background-image: url('../images/pigsnoop.jpg');
+}
+
+.pig3 {
+  background-position: 80% 10%;
+  background-image: url('../images/bigpig.jpg');
+}
+
+.pig4 {
+  background-image: url('../images/pigamy.jpg');
+}
+
+.pig5 {
+  background-image: url('../images/pig2.jpg');
+  background-position: 80% 15%;
+}
+
+.pig6 {
+  background-image: url('../images/pig4.jpg');
+}
+
+.pig7 {
+  background-position: 80% -10%;
+  background-image: url('../images/pigboots.jpg');
+}
+
+.pig8 {
+  background-image: url('../images/pigwayne.jpg');
+}
+
+.pig-pic h3 {
+  color: white;
+  font-size: 18px;
+}
+
+.btn-block {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
