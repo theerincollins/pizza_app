@@ -62,6 +62,8 @@ Order.prototype.calculateTotal = function() {
 $(document).ready(function() {
   $("#start-order").click(function() {
     newOrder = new Order();
+    $("#build-pizza-container").show()
+    $("#intro").hide()
     return newOrder;
   });
 
