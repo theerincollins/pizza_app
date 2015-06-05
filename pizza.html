@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Rick People Pies</title>
+    <title>Rich People Pies</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
@@ -10,7 +10,43 @@
 
 
   <body>
-    <h1>Welcome to Rich People Pies!</h1>
+    <div class="container" id="build-pizza-container">
+      <h1>Welcome to Rich People Pie$!</h1>
+
+      <p>Build a Pie</p>
+      <form id="toppingsForm">
+        <input type="checkbox" name="toppings[]" value="1">Sausage
+        <input type="checkbox" name="toppings[]" value="15">Brownies
+        <input type="checkbox" name="toppings[]" value="2">Liquid Gold
+        <input type="checkbox" name="toppings[]" value="20">Pepperoni
+        <input type="checkbox" name="toppings[]" value="12">Goat Cheese
+        <input type="checkbox" name="toppings[]" value="3">Basil
+        <input type="checkbox" name="toppings[]" value="199">Diamond Crusted Shrimp
+        <input type="checkbox" name="toppings[]" value="200">Platinum Crusted Mushrooms
+        <input type="checkbox" name="toppings[]" value="8">Onion
+        <input type="checkbox" name="toppings[]" value="9">Candied Apples
+        <button class="btn btn-success" type="submit">Select Toppings</button>
+      </form>
+
+      <form id="size-form">
+        <select id="size-select">
+          <option value="50">Itty Bitty</option>
+          <option value="100">Small</option>
+          <option value="200">Medium</option>
+          <option value="400">Large</option>
+          <option value="800">X-Large</option>
+          <option value="1600">Super Gigantic</option>
+        </select>
+        <button class="btn btn-success" type="submit">Select Size</button>
+      </form>
+
+
+    <form id="quantity-form">
+      <input id="quantity-input" name="quantity-input" placeholder="How Many?">
+      <button class="btn btn-success" type="submit">Select Size</button>
+    </form>
+
+  </div>
 
   </body>
 
