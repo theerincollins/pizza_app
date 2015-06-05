@@ -132,4 +132,9 @@ $(document).ready(function() {
     }
 
   });
+
+  $(".order-pizza").click(function() {
+    $("#build-pizza-container").hide()
+    $("#delivery").show()
+  });
 });

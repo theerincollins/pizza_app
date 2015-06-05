@@ -47,3 +47,39 @@ ul {
 li {
   font-size: 18px;
 }
+
+.order-pizza {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#delivery {
+  background-image: url('../images/limo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  color: #FF69B4;
+  height: 100%;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  display: none;
+}
+
+#delivery h3 {
+  font-size: 70px;
+}
+
+#logo {
+  font-size: 40px;
+  margin-top: 325px;
+  background-color: #D4AF37;
+  width: 200px;
+  display: block;
+  margin-left: 420px;
+}
